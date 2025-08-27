@@ -508,7 +508,7 @@
 		<!-- End Service -->
 		
 		<!-- Under Construction Page -->
-		<section id="under-construction" class="construct section" style="background-image:url('img/under-construction.png'); display:none;">
+		<section id="under-construction" class="construct section">
 			<div class="table">
 				<div class="table-cell">
 					<div class="container">
@@ -635,71 +635,8 @@
 		<script src="js/particles.min.js"></script>
 		<script src="js/particle-code.js"></script>
 		<script src="js/jquery.counterup.min.js"></script>
-		<!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyC0RqLa90WDfoJedoE3Z_Gy7a7o8PCL2jw"></script> -->
-        <script type="text/javascript" src="js/gmaps.min.js"></script>
+		<!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyC0RqLa90WDfoJedoE3Z_Gy7a7o8PCL2jw"></script> 
+        <script type="text/javascript" src="js/gmaps.min.js"></script>-->
         <script src="js/main.js"></script>
-		<script>
-  // List of main sections
-  const mainSections = [
-    "slider", 
-    "intopart", 
-    "Videoplay", 
-    "blog-single", 
-    "investment", 
-    "bonus", 
-    "Services",
-	"disclaimer",
-    "testimonials"
-  ];
-
-  function showUnderConstruction() {
-    // Hide all main sections
-    mainSections.forEach(sec => {
-      const el = document.getElementById(sec);
-      if (el) el.style.display = "none";
-    });
-
-    // Show under construction
-    const uc = document.getElementById("under-construction");
-    if (uc) uc.style.display = "block";
-  }
-
-  function showMainSections() {
-    // Show all main sections
-    mainSections.forEach(sec => {
-      const el = document.getElementById(sec);
-      if (el) el.style.display = "block";
-    });
-
-    // Hide under construction
-    const uc = document.getElementById("under-construction");
-    if (uc) uc.style.display = "none";
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", e => {
-      const href = (link.getAttribute("href") || "").trim().toLowerCase();
-
-      // Broken/empty links → show Under Construction
-      if (href === "" || href === "#" || href === "javascript:" || href === "javascript:void(0);" || href === "javascript:;"  || href.startsWith("javascript")) {
-        e.preventDefault();
-        showUnderConstruction();
-      } else {
-        // Normal link → show main sections
-        showMainSections();
-      }
-    });
-  });
-
-  // Default: show main sections
-  showMainSections();
-});
-
-</script>
-
-
-
-  </script>
-    </body>
+</body>
 </html>
