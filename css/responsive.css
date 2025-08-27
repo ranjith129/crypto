@@ -60,6 +60,8 @@
 .footer .single-footer .mail i {
 	top: 249px;
 }
+#under-construction {position: relative;background-color: rgba(27, 27, 27, 0.5);background-position: center;background-repeat: no-repeat;display:none;}
+#under-construction::before {content: "";position: absolute;inset: 0;background-color: rgba(27, 27, 27, 0.5);z-index: 0;}
 }
 
 @media only screen and (max-width: 767px){
@@ -182,7 +184,7 @@
 .footer .single-footer {
 	margin-top: 25px;
 	border-top:2px solid #3333334d;
-	padding-top:5px;
+	padding-top:15px;
 }
 .footer .single-footer .mail i {
 	display:none;
@@ -194,9 +196,8 @@
 .contact .form input {
 	padding-left: 0px;
 }
-
-
-
+#under-construction {position: relative;background-color: rgba(27, 27, 27, 0.5);background-position: center;background-repeat: no-repeat;display:none;}
+#under-construction::before {content: "";position: absolute;inset: 0;background-color: rgba(27, 27, 27, 0.5);z-index: 0;}
 }
 
 @media only screen and (max-width: 320px){
@@ -210,4 +211,6 @@
 	height: 50px;
 	width: 90px;
 }
+#under-construction {position: relative;background-color: rgba(27, 27, 27, 0.5);background-position: center;background-repeat: no-repeat;display:none;}
+#under-construction::before {content: "";position: absolute;inset: 0;background-color: rgba(27, 27, 27, 0.5);z-index: 0;}
 }
