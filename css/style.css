@@ -2071,6 +2071,8 @@ a:hover{
 /*===================
 	Under Construction Page
 =====================*/
+#under-construction {position: relative;background-color: #1b1b1b !important;background: url("../img/under-construction.png") right no-repeat;background-repeat: no-repeat;display:none;}
+#under-construction::before {content: "";position: absolute;inset: 0;background-color: rgba(27, 27, 27, 0.5);z-index: 0;}
 .construct {
 	background: #1b1b1b;
 }
@@ -2087,15 +2089,16 @@ a:hover{
 	width: 40px;
 }
 .construct .construct-left{
-	margin-top:50px;
+	/* margin-top:50px; */
 }
 .construct .construct-left p {
 	color: #fff;
-	font-size: 21px;
+	font-size: 24px;
 }
+
 .construct .construct-left p span{
 	font-weight: 700;
-	font-size: 35px;
+	font-size: 30px;
 	margin-right:5px;
 }
 .construct .construct-left .p2{
@@ -2105,7 +2108,7 @@ a:hover{
 	font-size:15px;
 }
 .construct .construct-left h2 {
-	font-size: 72px;
+	font-size: 40px;
 	font-weight: 700;
 	color: #fff;
 }
@@ -2180,9 +2183,6 @@ a:hover{
 }
 .construct .construct-right{}
 .construct .construct-right img{}
-	#under-construction {background-position: right;
-    background-repeat: no-repeat;}
-
 /*===================
 	End Under Construction Page
 =====================*/
@@ -2477,6 +2477,7 @@ a:hover{
 	z-index: 99;
 	box-shadow: -10px 10px 10px #0000004d;
 }
+
 #contact .contact-left h3{
 	color:#333;
 	border-bottom:1px solid;
