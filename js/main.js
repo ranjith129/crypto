@@ -205,3 +205,64 @@
 			});
 		});
 })(jQuery);
+
+//Under construction - Display start//
+
+// List of main sections
+  const mainSections = [
+    "slider", 
+    "intopart", 
+    "Videoplay", 
+    "blog-single", 
+    "investment", 
+    "bonus", 
+    "Services",
+	"disclaimer",
+    "testimonials"
+  ];
+
+  function showUnderConstruction() {
+    // Hide all main sections
+    mainSections.forEach(sec => {
+      const el = document.getElementById(sec);
+      if (el) el.style.display = "none";
+    });
+
+    // Show under construction
+    const uc = document.getElementById("under-construction");
+    if (uc) uc.style.display = "block";
+  }
+
+  function showMainSections() {
+    // Show all main sections
+    mainSections.forEach(sec => {
+      const el = document.getElementById(sec);
+      if (el) el.style.display = "block";
+    });
+
+    // Hide under construction
+    const uc = document.getElementById("under-construction");
+    if (uc) uc.style.display = "none";
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", e => {
+      const href = (link.getAttribute("href") || "").trim().toLowerCase();
+
+      // Broken/empty links → show Under Construction
+      if (href === "" || href === "#" || href === "javascript:" || href === "javascript:void(0);" || href === "javascript:;"  || href.startsWith("javascript")) {
+        e.preventDefault();
+        showUnderConstruction();
+      } else {
+        // Normal link → show main sections
+        showMainSections();
+      }
+    });
+  });
+
+  // Default: show main sections
+  showMainSections();
+});
+
+//Under construction - Display end//
